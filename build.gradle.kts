@@ -33,7 +33,11 @@ allprojects {
         }
     }
 }
-
+dependencies {
+    mappings("org.parchmentmc.data:parchment-1.21.4:2024.12.07@zip") {
+        artifactUrls("https://maven.parchmentmc.org/org/parchmentmc/data/parchment-1.21.4/2024.12.07/")
+    }
+}
 subprojects {
     apply(plugin = "java")
     apply(plugin = "com.diffplug.spotless")
