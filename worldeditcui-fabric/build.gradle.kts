@@ -35,6 +35,9 @@ loom {
 
 val fabricApi by configurations.creating
 dependencies {
+    mappings("org.parchmentmc.data:parchment-1.21.4:2024.12.07@zip") {
+        artifactUrls("https://maven.parchmentmc.org/org/parchmentmc/data/parchment-1.21.4/2024.12.07/")
+    }
     implementation(project(":worldeditcui-protocol-fabric", configuration = "namedElements")) { isTransitive = false }
     implementation(project(":worldeditcui-protocol-common", configuration = "namedElements")) { isTransitive = false }
     include(project(":worldeditcui-protocol-fabric"))
