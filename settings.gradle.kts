@@ -25,3 +25,13 @@ sequenceOf(
 ).forEach {
     include("worldeditcui-$it")
 }
+dependencyResolutionManagement {
+    repositories {
+        maven("https://maven.parchmentmc.org") // Parchment 主仓库
+        maven("https://ldtteam.jfrog.io/artifactory/parchmentmc-public/") // Parchment 镜像
+        maven("https://maven.minecraftforge.net") // Forge 工具
+        maven("https://maven.fabricmc.net") // Fabric
+        maven("https://maven.architectury.dev/") // Architectury
+        gradlePluginPortal()
+    }
+}
