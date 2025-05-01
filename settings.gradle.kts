@@ -18,6 +18,7 @@ pluginManagement {
         maven("https://maven.minecraftforge.net")
         maven("https://maven.architectury.dev/")
         maven("https://maven.fabricmc.net/")
+        maven("https://ldtteam.jfrog.io/ui/native/parchmentmc-public/")
         gradlePluginPortal()
         // maven("https://maven.fabricmc.net/")
         // gradlePluginPortal()
