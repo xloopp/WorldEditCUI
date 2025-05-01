@@ -2,29 +2,21 @@ rootProject.name = "WorldEditCUI"
 
 pluginManagement {
     repositories {
-        // mirrors:
-        // - https://maven.architectury.dev/
-        // - https://maven.fabricmc.net/
-        // - gradlePluginPortal
+        // 确保以下仓库按顺序声明
+        maven("https://maven.parchmentmc.org") // Parchment 主仓库
+        maven("https://ldtteam.jfrog.io/artifactory/parchmentmc-public/") // Parchment 镜像
+        maven("https://maven.minecraftforge.net") // Forge 工具
+        maven("https://maven.fabricmc.net") // Fabric
+        maven("https://maven.architectury.dev/") // Architectury
+        gradlePluginPortal()
+        
+        // Stellardrift 仓库（如有需要）
         maven(url = "https://repo.stellardrift.ca/repository/stable/") {
             name = "stellardriftReleases"
             mavenContent { releasesOnly() }
         }
-        maven(url = "https://repo.stellardrift.ca/repository/snapshots/") {
-            name = "stellardriftSnapshots"
-            mavenContent { snapshotsOnly() }
-        }
-        maven("https://maven.parchmentmc.org")
-        maven("https://maven.minecraftforge.net")
-        maven("https://maven.architectury.dev/")
-        maven("https://maven.fabricmc.net/")
-        maven("https://ldtteam.jfrog.io/ui/native/parchmentmc-public/")
-        gradlePluginPortal()
-        // maven("https://maven.fabricmc.net/")
-        // gradlePluginPortal()
     }
 }
-
 sequenceOf(
     "fabric",
     "protocol-common",
